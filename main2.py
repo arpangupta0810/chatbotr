@@ -12,7 +12,7 @@ def read_csv_into_dataframe(csv_name):
     return df
 
 def initialize_chatbot():
-    data_frame = read_csv_into_dataframe(r"chatbotr/Renewable_Energy_Final123 1.csv")  # Replace "path_to_your_csv_file.csv" with the path to your CSV file
+    data_frame = read_csv_into_dataframe(r"Renewable_Energy_Final123 1.csv")  # Replace "path_to_your_csv_file.csv" with the path to your CSV file
     llm = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768")
     p_agent = create_pandas_dataframe_agent(llm=llm, df=data_frame, verbose=True, handle_parsing_errors=True)
     return p_agent
